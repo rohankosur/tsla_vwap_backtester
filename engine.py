@@ -51,8 +51,8 @@ class BacktestEngine:
                     current_atr = entry_price * 0.005 # Fallback if ATR is not calculated yet
                 
                 stop_loss = entry_price - current_atr
-                # 2:1 Reward-to-Risk ratio
-                take_profit = entry_price + (2 * current_atr)
+                # 1.5:1 Reward-to-Risk ratio to target a ~40-45% win rate
+                take_profit = entry_price + (1.5 * current_atr)
 
         return self.trades
         
